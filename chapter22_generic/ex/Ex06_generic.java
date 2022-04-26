@@ -71,10 +71,8 @@ class Computer {}
 
 public class Ex06_generic {
 	public static void main(String[] args) {
-		// 바스켓에 각 과일들 넣고
-		// 바스켓에 담긴 과일들 줄력
 		
-		Basket<Food> basket = new Basket<>(5);	// <부모클래스>를 넣었기 때문에 업캐스팅 통해서 효율적으로 사용가능
+		Basket<Food> basket = new Basket<Food>(5);	// <부모클래스>를 넣었기 때문에 업캐스팅 통해서 효율적으로 사용가능
 		
 		basket.add(new Apple("사과"));	// 부모타입으로 자식들이 들어가는 업캐스팅
 		basket.add(new Banana("바나나"));
@@ -83,15 +81,10 @@ public class Ex06_generic {
 		basket.add(new Apple("사과"));
 		basket.add(new Apple("사과"));
 		basket.add(new Apple("사과"));
-		basket.add(new Apple("사과"));
-		basket.add(new Apple("사과"));
-		basket.add(new Apple("사과"));
-		basket.add(new Apple("사과"));
-		basket.add(new Apple("사과"));
 //		basket.add(new Computer());		실행 불가 업캐스팅이 불가하기 때문
 //		Food food = new Computer();		성립 X (추상클래스는 무조건 상속받아야 한다)
 		
-		System.out.println(Arrays.toString(basket.getFoods()));
+		System.out.println("Basket에 담긴 음식 : " + Arrays.toString(basket.getFoods()));
 		
 	}
 }

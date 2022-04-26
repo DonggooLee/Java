@@ -10,7 +10,8 @@ import java.util.Arrays;
 
 public class Ex03_generic {
 	
-	// 제네릭 메소드
+	// 제네릭 메소드 => 없었으면 배열의 데이터타입에 따른 오버로딩된 메소드 3개가 각각 있었어야 한다.
+	// 타입이 뭐든 하나로 퉁칠수 있다.
 	public static <T> void printArray(T[] arr) {		// <T> 위치를 확인하자!
 		System.out.println(Arrays.toString(arr));		// 배열 값 전체 출력
 	}
@@ -24,13 +25,13 @@ public class Ex03_generic {
 		// 제네릭은 참조타입만 받기 때문에 int, double 기본타입으로 만들면 되지 않는다!
 		// 코드도 효율적으로 사용할 수 있다.
 		
-		Integer[] arr1 = {1,2,3,4,5};
-		Double[] arr2 = {1.5,2.5,3.5};
-		String[] arr3 = {"Hello", "world"};
+		Integer[] intarr = {1,2,3,4,5};
+		Double[] douarr = {1.5,2.5,3.5};
+		String[] strarr = {"Hello", "world"};
 		
-		printArray(arr3);
-		printArray(arr2);
-		printArray(arr1);
+		printArray(strarr);
+		printArray(douarr);
+		printArray(intarr);
 		
 	}
 	

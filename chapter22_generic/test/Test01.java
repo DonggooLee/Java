@@ -3,11 +3,11 @@ package org.ddongq.test;
 import java.util.Arrays;
 
 /*
-Q1. Test01.java
-문자/정수/실수 타입의 배열을 전달하고 데이터 타입을 체크하여
-해당 데이터 타입과 해당 배열의 데이터들을 출력
-class TypeCheckClass - 필드 : T[] arr
-   			  		   메소드 : String checkType(T[] arr), toString()
+	Q1. Test01.java
+	문자/정수/실수 타입의 배열을 전달하고 데이터 타입을 체크하여
+	해당 데이터 타입과 해당 배열의 데이터들을 출력
+	class TypeCheckClass - 필드 : T[] arr
+	   			  		   메소드 : String checkType(T[] arr), toString()
 */
 
 class TypeCheckClass<T> {

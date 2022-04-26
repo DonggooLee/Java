@@ -1,15 +1,15 @@
 package org.ddongq.test;
 
 /*
-Q4. Test04.java
-interface Car					메소드 : info();
-class Bus implements Car
-class CityTourBus extends Bus
-class SeoulBus extends Bus
-class Taxi implements Car
-Class Bicycle
-Class Test04					메소드 : static <T extends Car> onlyCar(T car) 
- - CityTourBus, SeoulBus, Taxi 정보 출력
+	Q4. Test04.java
+	interface Car					메소드 : info();
+	class Bus implements Car
+	class CityTourBus extends Bus
+	class SeoulBus extends Bus
+	class Taxi implements Car
+	Class Bicycle
+	Class Test04					메소드 : static <T extends Car> onlyCar(T car) 
+	- CityTourBus, SeoulBus, Taxi 정보 출력
 */
 
 interface Car {
@@ -45,7 +45,7 @@ class Taxi implements Car {
 }
 
 class Bicycle {
-	public void output() {
+	public void info() {
 		System.out.println("자전거");
 	}
 }
@@ -53,13 +53,14 @@ class Bicycle {
 
 public class Test04 {
 	// <T extends Car> 쓰는 이유는 Car를 상속받은 클래스들만 할 수 있게 만들어준다?
+	// type의 T number N 
 	public static <T extends Car> void onlyCar(T car) {
 		car.info();
 	}
 	
 	public static void main(String[] args) {
 	
-		onlyCar(new cityTourBus());	// onlyCar(T car)에 new cityTourBus를 생성해주면 된다
+		onlyCar(new cityTourBus());				// onlyCar(T car)에 new cityTourBus를 생성해주면 된다
 		System.out.println("------------");
 		onlyCar(new SeoulBus());
 		System.out.println("------------");

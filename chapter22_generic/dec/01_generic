@@ -18,7 +18,7 @@
  	<제네릭 코드>
  	List<String> list = new ArrayList<String>();
  	list.add("hello");
- 	String str = list.get(0);	// 타입 변환을 하지 않는다.
+ 	String str = list.get(0);			// 타입 변환을 하지 않는다.
  	
 
  - 제네릭 클래스와 제네릭 메소드의 구현이 가능하다.
@@ -29,7 +29,6 @@
 	3) T[] arr;					 가능!
 
 	class Box <T> {
-	
 		private T obj;
 		
 		public void setObj(T obj) {
@@ -41,7 +40,6 @@
 	}
 
 // main
-
 Box<String> box = new Box<>();							// 구체화 : T가 무엇인지 알려주는 것
 Box<String> box = new Box<String>();  (위와 동일한내용)		// 구체화는 referenceType 만 가능 하다. (PrimitiveType은 불가!!)
 

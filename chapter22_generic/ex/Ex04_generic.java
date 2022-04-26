@@ -1,6 +1,6 @@
 package org.ddongq.ex;
 
-class Room<T1, T2> { 
+class Room <T1, T2> { 	//두개 받아서 방을 꾸밀꺼고 두개다 T로 선언해서 어떤 타입이던 받을것이다.
 	
 	private T1 furniture1;
 	private T2 furniture2;
@@ -20,7 +20,7 @@ class Room<T1, T2> {
 		sb.append("첫번쩨 가구 : ").append(furniture1).append("\n");
 		sb.append("두번째 가구 : ").append(furniture2);
 		return sb.toString();
-		// sb의 StringBuffer 타입을 String으로 toString()을 이용하여 변환시킨다.
+		//sb자체를 출력할수 없고 sb객체안의 문자열을 출력해야 한다.
 	}
 	
 }
@@ -56,20 +56,17 @@ class DressTable {
 public class Ex04_generic {
 	public static void main(String[] args) {
 		
-		Room<Bed, DressTable> room1 = new Room<>();
-
+		Room<Bed, DressTable> room1 = new Room<Bed, DressTable>();
 		room1.setFurniture1(new Bed());
 		room1.setFurniture2(new DressTable());
-		
 		System.out.println(room1);
 		
-		Room<Chair, Table> room2 = new Room<>();
+		System.out.println("------------------");
 		
+		Room<Chair, Table> room2 = new Room<Chair, Table>();
 		room2.setFurniture1(new Chair());
 		room2.setFurniture2(new Table());
-		
 		System.out.println(room2);
-		
 		
 	}
 }
