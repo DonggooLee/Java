@@ -10,7 +10,9 @@
 				   			  
 		Map ───────────────────────┬── HashMap 	
 			   					   ├── SortedMap ─── TreeMap
-			   	   				   └── HashTable 
+			   	   				   └── HashTable
+			   	   				   
+			   	   				   
 1.2 주요 인터페이스 분류
  - List
 	1) 순서가 있는 데이터의 집합
@@ -35,7 +37,7 @@
 		
 		while(itr.hasNext()){
 			itr.next();
-		} 		
+		} 
 
 
 1.3 구현 클래스 

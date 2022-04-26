@@ -10,6 +10,8 @@ public class Ex03_LinkedList {
 		/*
 		 * ArrayList와 LinkedList 성능 비교
 		 * 10000개의 객체를 0번 인덱스에 삽입하는데 걸리는 시간을 측정
+		 * 
+		 *  - 순차적으로 추가/삭제하는 경우는 ArrayList가 빠르지만, 중간에 추가/삭제는 LinkedList가 더 빠르다.
 		 */
 
 		List<String> list1 = new ArrayList<String>();

@@ -11,13 +11,15 @@ public class Ex02_Iterator {
 		List<Integer> list = new ArrayList<Integer>();
 
 //		for(int i=1; i<=10; i++) {
-//			list.add(i*10);
+//			list.add((i+1)*10);
 //		}
 		
 		for(int i=10; i<=100; i+=10) {
-				list.add(i);
+			list.add(i);
 		}
-		
+		/*
+		 * for(int i=0;i<list.size();i++) { System.out.println(list.get(i)); }
+		 */
 		// 반복자 호출 <동일한 참조타입으로 설정>
 		Iterator<Integer> itr = list.iterator(); // 리스트에서 호출한걸 itr에 입력해준다
 		

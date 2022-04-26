@@ -13,15 +13,17 @@ public class Ex01_ArrayList {
 		// ArrayList만 가지고 있는 메소드를 사용할때 사용 (일반적으로 List 사용)
 		
 		// 1. 저장 : .add()
-		list.add(new Integer(1));
+		list.add(new Integer(1));	// 1을 객체로 만들어서 저장
 		list.add(new Integer(2));
-		list.add(5);
+		list.add(5);				// Auto-Boxing 에 의해서 가능한 코드!
 		list.add(4);
 		list.add(3);
-//		list.add(5, 2);		인덱스를 지정해서 값을 넣는게 가능
+//		list.add(5, 2);				인덱스를 지정해서 값을 넣는게 가능  add(인덱스 번호, 값)
 		
 		// 2. 저장된 요소 가져오기 : .get()
-		System.out.println("첫 번째 요소 : " + list.get(0));	// .get(인덱스 번호)
+		System.out.println("첫 번째 요소 : " + list.get(0));	// .get(index)
+		System.out.println("두 번째 요소 : " + list.get(1));	
+		System.out.println("세 번째 요소 : " + list.get(2));	
 		
 		// 3. 크기 : .size() <-> .length(일반배열)과 차이점
 		for(int i=0; i<list.size(); i++) {
@@ -48,17 +50,15 @@ public class Ex01_ArrayList {
 		System.out.println("list : " + list);
 		
 		// 7. 정렬 : .sort()
-		Collections.sort(list);		// sort는 static 메소드
-		System.out.println("list : " + list);
+		Collections.sort(list);	// sort는 static 메소드, 정렬 기능
+		System.out.println("정렬 후 list : " + list);
 		
 		// 8. 최악(최고)의 성능이 나타나도록 list의 모든 데이터 삭제
 		while(list.size()>0) {
-			// 최악 (앞 인덱스 데이터가 삭제되면 뒤 인덱스 데이터 앞 인덱스로 이동된다)
-			list.remove(0);
-			// 최고
-			list.remove(list.size()-1);	// 인덱스가 0부터 시작하기 때문에 -1 해줘야 한다
+			list.remove(0);				// 최악! (앞 인덱스 데이터가 삭제되면 뒤 인덱스 데이터 앞 인덱스로 이동된다)
+			list.remove(list.size()-1);	// 최고! (뒤 인덱스부터 삭제) => 인덱스가 0부터 시작하기 때문에 -1 해줘야 한다
 		}
-		System.out.println("list : " + list);
+		System.out.println("삭제 후 list : " + list);
 		
 	}
 }

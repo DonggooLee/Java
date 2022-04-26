@@ -15,9 +15,8 @@ public class Ex04_HashSet {
 		set.add("DB");
 		set.add("JSP");
 		set.add("Wdb");
-		set.add("Java");
-		// 중복된 값이 저장되지 않는다!
-		System.out.println(set);
+		set.add("Java");			// 중복 저장 시도
+		System.out.println(set);	// 중복된 값이 저장되지 않는다!
 		
 		// Iterator 객체를 이용하여 Spring인 내용을 삭제 후 set 내용 출력
 		
